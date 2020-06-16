@@ -25,6 +25,19 @@ required:
 - [Liquid][]
 - [RDiscount][]
 
+
+On Ubuntu 18.04:
+```
+$ apt-get update
+$ apt-get install ruby ruby-dev make gcc zlib1g-dev
+$ gem install --user-install bundler
+$ # replace 2.5.0 with the version of Ruby you installed
+$ echo 'export PATH="${HOME}/.gem/ruby/2.5.0/bin:$PATH"' >> ~/.bashrc
+$ source ~/.bashrc
+$ cd $PATH_TO_THIS_REPO
+$ bundle install
+```
+
 It is usually simplest to install the `bundler` gem and then within your checkout's directory,
 run `bundle install` to install all required gems.
 
