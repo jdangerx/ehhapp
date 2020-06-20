@@ -28,12 +28,11 @@ required:
 
 On Ubuntu 18.04:
 ```
+$ add-apt-repository ppa:rael-gc/rvm
 $ apt-get update
-$ apt-get install ruby ruby-dev make gcc zlib1g-dev
-$ gem install --user-install bundler
-$ # replace 2.5.0 with the version of Ruby you installed
-$ echo 'export PATH="${HOME}/.gem/ruby/2.5.0/bin:$PATH"' >> ~/.bashrc
-$ source ~/.bashrc
+$ apt-get install rvm
+$ rvm install 1.9.3 --auto-dotfiles
+$ gem install bundler -v 1.17.3 # the last one to support ruby < 2.3
 $ cd $PATH_TO_THIS_REPO
 $ bundle install
 ```
