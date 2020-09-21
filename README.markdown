@@ -24,12 +24,12 @@ This is a little janky, since it requires you to pull down the repository and yo
 $ # do what you need to do to install docker-compose
 $ git clone git@github.com:ehhopp/ehhapp
 $ cd ehhapp
-ehhapp $ docker-compose up --build ehhapp # --build is optional, it just rebuilds the image
+ehhapp $ docker-compose up ehhapp-dev
 ```
 
 If there aren't any errors, the server should be accessible at `localhost:4567`.
 
-To get rid of the authentication requirement during local development, add this to `ehhapp/config.yaml`:
+To get rid of the authentication requirement during local development, add this to `ehhapp/config.yaml` on the host machine:
 
 ```
 auth:
