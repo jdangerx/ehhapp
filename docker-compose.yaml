@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  ehhapp:
+    image: jdangerx/ehhapp:latest
+    ports:
+      - "4567:4567"
+    volumes:
+      - /ehhapp/ehhapp-data
+      - ./config.yaml:/ehhapp/config.yaml
