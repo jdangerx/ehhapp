@@ -16,6 +16,20 @@ keep pages' history and [Sinatra][] to serve them.
 Install
 -------
 
+## Docker
+
+This is a little janky, since it requires you to pull down the repository and you can't just run it straight off of Dockerhub:
+
+```
+$ # do what you need to do to install docker-compose
+$ git clone git@github.com:ehhopp/ehhapp
+$ cd ehhapp
+$ touch config.yaml # If you don't do this, docker-compose will make a `config.yaml` directory and then get confused!
+ehhapp $ docker-compose up ehhapp
+```
+
+## Bare metal
+
 The EHHapp is a Ruby/Rack web application.  Ruby is preinstalled on most Macs and packaged for
 most Linuxes.  You should also install [Rubygems][gems].  The following gems are 
 required:
